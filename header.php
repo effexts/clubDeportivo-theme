@@ -137,7 +137,7 @@
           $content = esc_html(wp_trim_words($post->post_content, 25, '')); ?>
       <div id="slidecaption<?php echo esc_attr($i); ?>" class="nivo-html-caption">
         <div class="slide_info">
-          <h2><?php echo wp_kses_post($title); ?></h2>
+          <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo wp_kses_post($title); ?></a></h2>
           <div class="clear"></div>
           <p><?php echo wp_kses_post($content); ?></p>
           <div class="clear"></div>
@@ -154,28 +154,28 @@
   <?php if ($hideboxes == '') {
           ?>
     <section id="pagearea">
-    <div class="container">
-    <?php for ($p = 1; $p < 4; $p++) {
-              ?>
-      <?php if (get_theme_mod('page-column' . $p, false)) {
+      <div class="container">
+        <?php for ($p = 1; $p < 4; $p++) {
                   ?>
-        <?php $querycolumns = new WP_query('page_id=' . get_theme_mod('page-column' . $p, true));?>
-        <?php while ($querycolumns->have_posts()): $querycolumns->the_post();?>
-            <div class="threebox box<?php echo esc_attr($p) ?> <?php if ($p % 3 == 0) {
-                          echo "last_column";
-                      }?>">
-            <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title();?></a> </h3>
-            <p><?php the_excerpt();?></p>
-            <a class="ReadMore" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer más', 'skt-strong');?></a>
-            </div>
-            <?php endwhile;
-                  wp_reset_postdata();?>
-        <?php
+          <?php if (get_theme_mod('page-column' . $p, false)) {
+                      ?>
+            <?php $querycolumns = new WP_query('page_id=' . get_theme_mod('page-column' . $p, true));?>
+            <?php while ($querycolumns->have_posts()): $querycolumns->the_post();?>
+                <div class="threebox box<?php echo esc_attr($p) ?> <?php if ($p % 3 == 0) {
+                              echo "last_column";
+                          }?>">
+                <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title();?></a> </h3>
+                <p><?php the_excerpt();?></p>
+                <a class="ReadMore" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer más', 'skt-strong');?></a>
+                </div>
+                <?php endwhile;
+                      wp_reset_postdata();?>
+            <?php
 
-              }
-          }?>
-    <div class="clear"></div>
-    </div><!-- container -->
+                  }
+              }?>
+        <div class="clear"></div>
+      </div><!-- container -->
     </section><!-- #pagearea -->
     <div class="clear"></div>
     <?php
