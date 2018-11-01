@@ -87,7 +87,9 @@ $hidecontact = get_theme_mod('hide_contact', 1);
          <div class="copyright-wrapper">
         	<div class="container">
            		 <div class="copyright-txt">&nbsp;</div>
-            	 <div class="design-by"><?php printf('<a target="_blank" href="'.esc_url(SKT_FREE_THEME_URL).'" rel="nofollow">SKT Strong</a>' ); ?></div>
+            	 <div class="design-by">
+                     <?php printf('<a target="_blank" href="'.esc_url(SKT_FREE_THEME_URL).'" rel="nofollow">SKT Strong</a>' ); ?>
+                </div>
                  <div class="clear"></div>
             </div>           
         </div>
