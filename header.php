@@ -140,7 +140,7 @@
           <h2><a href="<?php echo esc_url(get_permalink());?>"> <?php echo wp_kses_post($title); ?></a> </h2>
           <div class="clear"></div>
           <p><?php echo wp_kses_post($content); ?></p>
-          <p>leer mas</p>
+          <p><a href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer mas','skt-strong'); ?></a></p>
           <div class="clear"></div>
         </div>
       </div>
