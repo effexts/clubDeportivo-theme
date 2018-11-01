@@ -137,10 +137,10 @@
           $content = esc_html(wp_trim_words($post->post_content, 25, '')); ?>
       <div id="slidecaption<?php echo esc_attr($i); ?>" class="nivo-html-caption">
         <div class="slide_info">
-          <h2><a href="<?php echo esc_url(get_permalink());?>"> <?php echo wp_kses_post($title); ?></a> </h2>
+          <h2><?php echo wp_kses_post($title); ?></h2>
           <div class="clear"></div>
           <p><?php echo wp_kses_post($content); ?></p>
-          <p><a href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer mas','skt-strong'); ?></a></p>
+          <p class="slide_more"><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html_e('Leer mas','skt-strong'); ?></a></p>
           <div class="clear"></div>
         </div>
       </div>
