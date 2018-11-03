@@ -27,11 +27,11 @@
 			the_content();
 			
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'skt-strong' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Páginas:', 'skt-strong' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'skt-strong' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Página', 'skt-strong' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>     

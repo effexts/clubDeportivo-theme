@@ -28,7 +28,7 @@
         </div><!-- .entry-summary -->
         <?php else : ?>
         <div class="entry-content">
-            <?php the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?>          
+            <?php the_content( esc_html__( 'Seguir leyendo <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?>          
         </div><!-- .entry-content -->
         <?php endif; ?>
         <div class="clear"></div>

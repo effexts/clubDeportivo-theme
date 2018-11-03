@@ -30,7 +30,7 @@ function skt_strong_setup() {
 	add_image_size( 'skt-strong-logo', 350, 100 );
 	add_theme_support( 'custom-logo', array( 'size' => 'skt-strong-logo' ) );
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'skt-strong' ),		
+		'primary' => __( 'Menu principal', 'skt-strong' ),		
 	) );
 	add_theme_support( 'custom-background', array(
 		'default-color' => 'ffffff'
@@ -43,8 +43,8 @@ add_action( 'after_setup_theme', 'skt_strong_setup' );
 function skt_strong_widgets_init() { 	
 	
 	register_sidebar( array(
-		'name'          => __( 'Blog Sidebar', 'skt-strong' ),
-		'description'   => __( 'Appears on blog page sidebar', 'skt-strong' ),
+		'name'          => __( 'Sidebar', 'skt-strong' ),
+		'description'   => __( 'Aparece en la barra lateral', 'skt-strong' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '',		
 		'before_title'  => '<h3 class="widget-title">',
@@ -53,8 +53,8 @@ function skt_strong_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Header Right Widget', 'skt-strong' ),
-		'description'   => __( 'Appears on top of the header', 'skt-strong' ),
+		'name'          => __( 'Widget derecho de cabecera', 'skt-strong' ),
+		'description'   => __( 'Aparece en la parte superior', 'skt-strong' ),
 		'id'            => 'header-right-widget',
 		'before_widget' => '',		
 		'before_title'  => '<h3 class="widget-title" style="display:none">',

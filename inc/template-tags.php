@@ -30,7 +30,7 @@ function skt_strong_content_nav( $nav_id ) {
 	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'skt-strong' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Navegación de entradas', 'skt-strong' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -40,11 +40,11 @@ function skt_strong_content_nav( $nav_id ) {
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( esc_attr__( '<span class="meta-nav">&larr;</span> Older posts', 'skt-strong' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( esc_attr__( '<span class="meta-nav">&larr;</span> Entradas antiguas', 'skt-strong' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( esc_attr__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( esc_attr__( 'Nuevas entradas <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -67,10 +67,10 @@ function skt_strong_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php esc_html_e( 'Pingback:', 'skt-strong' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_attr__( 'Edit', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'skt-strong' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_attr__( 'Editar', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
-	<?php else : ?>
+	<?php else : ?>a
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
@@ -86,11 +86,11 @@ function skt_strong_comment( $comment, $args, $depth ) {
 							<?php printf( esc_attr_x( '%1$s', '1: date', 'skt-strong' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( esc_attr__( 'Edit', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( esc_attr__( 'Editar', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'skt-strong' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Tu comentario espera moderación.', 'skt-strong' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -181,7 +181,7 @@ function skt_strong_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( esc_attr__( '<span class="posted-on">Published %1$s</span><span class="byline"> by %2$s</span>', 'skt-strong' ),
+	printf( esc_attr__( '<span class="posted-on">Publicado el %1$s</span><span class="byline"> por %2$s</span>', 'skt-strong' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string

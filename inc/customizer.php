@@ -30,14 +30,14 @@ function skt_strong_customize_register( $wp_customize ) {
 		
 	
 	$wp_customize->add_setting('color_scheme',array(
-			'default'	=> '#00c0ff',
+			'default'	=> '#678FCA',
 			'sanitize_callback'	=> 'sanitize_hex_color'
 	));
 	
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control($wp_customize,'color_scheme',array(
-			'label' => __('Color Scheme','skt-strong'),			
-			 'description'	=> __('More color options in PRO Version','skt-strong'),	
+			'label' => __('Esquema de colores','skt-strong'),			
+			'description'	=> __('Aquí se pueden cambiar los colores del tema','skt-strong'),	
 			'section' => 'colors',
 			'settings' => 'color_scheme'
 		))
@@ -46,7 +46,7 @@ function skt_strong_customize_register( $wp_customize ) {
 	
 	// Slider Section		
 	$wp_customize->add_section( 'slider_section', array(
-            'title' => __('Slider Settings', 'skt-strong'),
+            'title' => __('Ajustes de Slider', 'skt-strong'),
             'priority' => null,
             'description'	=> __('La Imagen destacada debe ser ( 1400x431 )','skt-strong'),		
         )
@@ -195,11 +195,9 @@ function skt_strong_customize_register( $wp_customize ) {
     	   'type'      => 'checkbox'
      )); // Hide Page Boxes Column Section
 	
-	
-	
 	$wp_customize->add_section('social_sec',array(
 			'title'	=> __('Ajustes sociales','skt-strong'),				
-			'description'	=> __('More social icon available in PRO Version','skt-strong'),		
+			'description'	=> __('Aquí se pueden configurar las opciones de redes sociales','skt-strong'),		
 			'priority'		=> null
 	));
 	
@@ -210,7 +208,7 @@ function skt_strong_customize_register( $wp_customize ) {
 	));
 	
 	$wp_customize->add_control('fb_link',array(
-			'label'	=> __('Add facebook link here','skt-strong'),
+			'label'	=> __('Agrega enlace de Facebook','skt-strong'),
 			'section'	=> 'social_sec',
 			'setting'	=> 'fb_link'
 	));	
@@ -220,7 +218,7 @@ function skt_strong_customize_register( $wp_customize ) {
 	));
 	
 	$wp_customize->add_control('twitt_link',array(
-			'label'	=> __('Add twitter link here','skt-strong'),
+			'label'	=> __('Agrega enlace de Twitter','skt-strong'),
 			'section'	=> 'social_sec',
 			'setting'	=> 'twitt_link'
 	));
@@ -229,7 +227,7 @@ function skt_strong_customize_register( $wp_customize ) {
 			'sanitize_callback'	=> 'esc_url_raw'
 	));
 	$wp_customize->add_control('gplus_link',array(
-			'label'	=> __('Add google plus link here','skt-strong'),
+			'label'	=> __('Agrega enlace de Google Plus','skt-strong'),
 			'section'	=> 'social_sec',
 			'setting'	=> 'gplus_link'
 	));
@@ -238,7 +236,7 @@ function skt_strong_customize_register( $wp_customize ) {
 			'sanitize_callback'	=> 'esc_url_raw'
 	));
 	$wp_customize->add_control('linked_link',array(
-			'label'	=> __('Add linkedin link here','skt-strong'),
+			'label'	=> __('Agrega enlace de LinkedIn','skt-strong'),
 			'section'	=> 'social_sec',
 			'setting'	=> 'linked_link'
 	));
@@ -255,7 +253,7 @@ function skt_strong_customize_register( $wp_customize ) {
      ));	
 	
 	$wp_customize->add_section('footer_area',array(
-			'title'	=> __('Footer Area','skt-strong'),
+			'title'	=> __('Área Pie de Página','skt-strong'),
 			'priority'	=> null,
 	));
 	$wp_customize->add_setting('skt_strong_options[credit-info]', array(
@@ -271,46 +269,46 @@ function skt_strong_customize_register( $wp_customize ) {
     );
 	
 	$wp_customize->add_setting('newsfeed_title',array(
-			'default'	=> __('Latest News','skt-strong'),
+			'default'	=> __('Últimas noticias','skt-strong'),
 			'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	
 	$wp_customize->add_control('newsfeed_title',array(
-			'label'	=> __('Add title for latest news feed','skt-strong'),
+			'label'	=> __('Agregar el títutlo para la sección de últimas noticias','skt-strong'),
 			'section'	=> 'footer_area',
 			'setting'	=> 'newsfeed_title'
 	));	
 	
 	$wp_customize->add_setting('about_title',array(
-			'default'	=> __('About Us','skt-strong'),
+			'default'	=> __('Acerca de Nosotros','skt-strong'),
 			'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	
 	$wp_customize->add_control('about_title',array(
-			'label'	=> __('Add title for about us','skt-strong'),
+			'label'	=> __('Agrega un título para la sección "Acerca de nosotros"','skt-strong'),
 			'section'	=> 'footer_area',
 			'setting'	=> 'about_title'
 	));	
 		
 	$wp_customize->add_setting( 'about_description', array(
-			'default'	=> __('Sed suscipit etisds sit proin efficitur nibh euismod. Proindes venenatis orcfrdeesi sitmauris nec mauris vulputate, a posuere libero congue. Nam laoreet elit eu erat pulvinar, et efficitur nibh euismod. Proin venenatis orci sit amet nisl finibus vehicula. <br /> <br /> Sed suscipit mauris nec mauris vulputate, a posuere libero congue. Nam laoreet elit eu erat pulvinar, et efficitur nibh euismod. Proin venenatis orci sit amet nisl finibus vehicula.','skt-strong'),				
+			'default'	=> __('El Club Deportivo tiene como caracteristica principal beneficiar a toda la comunidad universitaria y local, con las condiciones necesarias para el desarrollo a nivel deportivo local, regional, nacional e internacional, mediante planes y programas adecuados a las necesidades, utilizando el tiempo libre, mitigando la fatiga intelectual, sedentarismo y las necesidades de recreacion.','skt-strong'),				
 			'sanitize_callback' => 'esc_textarea',
 	) );
 
 	$wp_customize->add_control( 'about_description', array(
 			'type' => 'textarea',
-			'label' => __( 'About Description', 'skt-strong' ),   
+			'label' => __( 'Descripción "Acerca de Nosotros"', 'skt-strong' ),   
 			'section' => 'footer_area',   
 			'setting'	=> 'about_description',
 	) );
 	
 	$wp_customize->add_setting('contact_title',array(
-			'default'	=> __('Contact Info','skt-strong'),
+			'default'	=> __('Información de Contacto','skt-strong'),
 			'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	
 	$wp_customize->add_control('contact_title',array(
-			'label'	=> __('Add title for footer contact info','skt-strong'),
+			'label'	=> __('Agrega un título para la sección "Información de Contacto"','skt-strong'),
 			'section'	=> 'footer_area',
 			'setting'	=> 'contact_title'
 	));
@@ -322,43 +320,43 @@ function skt_strong_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'hide_footer', array(
     	   'section'   => 'footer_area',    	 
-		   'label'	=> __('Uncheck To Show This Section','skt-strong'),
+		   'label'	=> __('Destildar para mostrar está sección','skt-strong'),
     	   'type'      => 'checkbox'
      ));	
 	
 	$wp_customize->add_section('contact_sec',array(
-			'title'	=> __('Contact Details','skt-strong'),
-			'description'	=> __('Add you contact details here','skt-strong'),
+			'title'	=> __('Detalles de Contacto','skt-strong'),
+			'description'	=> __('Añade los detalles de contacto','skt-strong'),
 			'priority'	=> null
 	));	
 	
 	$wp_customize->add_setting('contact_add',array(
-			'default'	=> __('591 Christie Way Passaic Street, North Carolina, America ( USA )','skt-strong'),
+			'default'	=> __('Club Deportivo Universidad de Tarapaca, 18 de Septiembre 2222, Complejo Deportivo Integral, Oficina 1, Segundo Piso.','skt-strong'),
 			'sanitize_callback'	=> 'esc_textarea',
 	));
 	
 	$wp_customize->add_control(	'contact_add', array(
 				'type' => 'textarea',
-				'label'	=> __('Add contact address here','skt-strong'),
+				'label'	=> __('Añade la dirección de contacto aquí','skt-strong'),
 				'section'	=> 'contact_sec',
 				'setting'	=> 'contact_add'
 	));
 	$wp_customize->add_setting('contact_no',array(
-			'default'	=> __('855-321-9876','skt-strong'),
+			'default'	=> __('+56-58-2205045','skt-strong'),
 			'sanitize_callback'	=> 'sanitize_text_field'
 	));
 	$wp_customize->add_control('contact_no',array(
-			'label'	=> __('Add contact number here.','skt-strong'),
+			'label'	=> __('Agrega número de contacto','skt-strong'),
 			'section'	=> 'contact_sec',
 			'setting'	=> 'contact_no'
 	));
 	$wp_customize->add_setting('contact_mail',array(
-			'default'	=> 'contact@company.com',
+			'default'	=> 'deportes@uta.cl',
 			'sanitize_callback'	=> 'sanitize_email'
 	));
 	
 	$wp_customize->add_control('contact_mail',array(
-			'label'	=> __('Add you email here','skt-strong'),
+			'label'	=> __('Agrega tu correo electrónico aquí','skt-strong'),
 			'section'	=> 'contact_sec',
 			'setting'	=> 'contact_mail'
 	));
@@ -370,7 +368,7 @@ function skt_strong_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'hide_contact', array(
     	   'section'   => 'contact_sec',    	 
-		   'label'	=> __('Uncheck To Show This Section','skt-strong'),
+		   'label'	=> __('Destildar para mostrar ésta opción','skt-strong'),
     	   'type'      => 'checkbox'
      ));	
 	
@@ -443,10 +441,8 @@ function skt_strong_custom_css(){
 					.blog_lists h4 a:hover,
 					.recent-post h6 a:hover,
 					.postmeta a:hover,
-					.recent-post .morebtn,
-					.logo h1 span,
-					.cols-3 .phone-no p span
-					{ color:<?php echo esc_attr(get_theme_mod('color_scheme','#00c0ff')); ?>;}
+					.recent-post .morebtn
+					{ color:<?php echo esc_attr(get_theme_mod('color_scheme','#678FCA')); ?>;}
 					 
 					
 					.pagination .nav-links span.current, .pagination .nav-links a:hover,
@@ -464,13 +460,12 @@ function skt_strong_custom_css(){
 					.sitenav ul li ul,
 					.header-social-icons a:hover,
 					.threebox.box2
-					{ background-color:<?php echo esc_attr(get_theme_mod('color_scheme','#00c0ff')); ?> !important;}					
+					{ background-color:<?php echo esc_attr(get_theme_mod('color_scheme','#678FCA')); ?> !important;}					
 					
-						
-					#menubar,
+
 					h2.section-title::after,
 					h2.section-title
-					{ border-color:<?php echo esc_attr(get_theme_mod('color_scheme','#00c0ff')); ?>;}
+					{ border-color:<?php echo esc_attr(get_theme_mod('color_scheme','#678FCA')); ?>;}
 					
 			</style> 
 <?php          
@@ -482,6 +477,6 @@ add_action('wp_head','skt_strong_custom_css');
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function skt_strong_customize_preview_js() {
-	wp_enqueue_script( 'skt_strong_customizer', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'skt_strong_customizer', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20180508', true );
 }
 add_action( 'customize_preview_init', 'skt_strong_customize_preview_js' );

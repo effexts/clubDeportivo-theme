@@ -33,9 +33,9 @@ get_header(); ?>
 				// Previous/next post navigation.
 				the_posts_pagination( array(
 							'mid_size' => 2,
-							'prev_text' => __( 'Back', 'skt-strong' ),
-							'next_text' => __( 'Next', 'skt-strong' ),
-							'screen_reader_text' => __( 'Posts navigation', 'skt-strong' )
+							'prev_text' => __( 'Atrás', 'skt-strong' ),
+							'next_text' => __( 'Siguiente', 'skt-strong' ),
+							'screen_reader_text' => __( 'Navegación de Posts', 'skt-strong' )
 				) );
 			    ?>
             <?php else : ?>

@@ -29,6 +29,7 @@
       <div class="logo">
         <?php skt_strong_the_custom_logo();?>
         <a href="<?php echo home_url('/'); ?>">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logosimple2.png" />
           <h1><?php bloginfo('name');?></h1>
           <p><?php bloginfo('description');?></p>
         </a>
@@ -44,10 +45,10 @@
               <div class="hdrinfo-left">
                 <img style="margin:0 5px -1px 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/icon-phone.png" alt="" />
               </div>
-              <div class="hdrinfo-right"><strong><?php esc_attr_e(get_theme_mod('contact_no', __('855-321-9876', 'skt-strong')));?></strong>
+              <div class="hdrinfo-right"><strong><?php esc_attr_e(get_theme_mod('contact_no', __('+56-58-2205045', 'skt-strong')));?></strong>
                 <?php if (get_theme_mod('contact_mail') !== "") { ?>
-                  <a href="mailto:<?php echo sanitize_email(get_theme_mod('contact_mail', 'contact@company.com')); ?>">
-                    <?php echo get_theme_mod('contact_mail', 'contact@company.com'); ?>
+                  <a href="mailto:<?php echo sanitize_email(get_theme_mod('contact_mail', 'deportes@uta.cl')); ?>">
+                    <?php echo get_theme_mod('contact_mail', 'deportes@uta.cl'); ?>
                   </a>
                   <?php
 
@@ -84,6 +85,7 @@
           <?php
           }?>
 
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logouta.png" />
         <div class="clear"></div>
         <?php endif; // end sidebar widget area?>
       </div><!--.widget-right-->

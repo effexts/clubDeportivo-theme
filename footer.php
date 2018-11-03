@@ -17,11 +17,11 @@ $hidecontact = get_theme_mod('hide_contact', 1);
              <div class="cols-3 widget-column-1">  
              
               <?php if ( get_theme_mod('about_title') !== "") { ?>
-                <h5><?php esc_html_e( get_theme_mod( 'about_title', esc_html__('About Us','skt-strong'))); ?></h5>             
+                <h5><?php esc_html_e( get_theme_mod( 'about_title', esc_html__('Acerca de nosotros','skt-strong'))); ?></h5>             
 			   <?php } ?>
                
                 <?php if ( get_theme_mod('about_description') !== "") { ?>
-                <p><?php echo html_entity_decode(esc_attr( get_theme_mod( 'about_description', __('Sed suscipit etisds sit proin efficitur nibh euismod. Proindes venenatis orcfrdeesi sitmauris nec mauris vulputate, a posuere libero congue. Nam laoreet elit eu erat pulvinar, et efficitur nibh euismod. Proin venenatis orci sit amet nisl finibus vehicula. <br /> <br /> Sed suscipit mauris nec mauris vulputate, a posuere libero congue. Nam laoreet elit eu erat pulvinar, et efficitur nibh euismod. Proin venenatis orci sit amet nisl finibus vehicula.','skt-strong')))); ?></p>
+                <p><?php echo html_entity_decode(esc_attr( get_theme_mod( 'about_description', __('El Club Deportivo tiene como caracteristica principal beneficiar a toda la comunidad universitaria y local, con las condiciones necesarias para el desarrollo a nivel deportivo local, regional, nacional e internacional, mediante planes y programas adecuados a las necesidades, utilizando el tiempo libre, mitigando la fatiga intelectual, sedentarismo y las necesidades de recreacion','skt-strong')))); ?></p>
 			   <?php } ?>                   
          
             </div><!--end .widget-column-1-->                  
@@ -30,7 +30,7 @@ $hidecontact = get_theme_mod('hide_contact', 1);
                <div class="cols-3 widget-column-2">  
                
                 <?php if ( get_theme_mod('newsfeed_title') !== "") { ?>
-                <h5><?php esc_html_e( get_theme_mod( 'newsfeed_title', __('Latest News','skt-strong'))); ?></h5>            
+                <h5><?php esc_html_e( get_theme_mod( 'newsfeed_title', __('Últimas Noticias','skt-strong'))); ?></h5>            
 			  <?php } ?>  
               
               <?php $args = array( 'posts_per_page' => 2, 'post__not_in' => get_option('sticky_posts'), 'orderby' => 'date', 'order' => 'desc' );
@@ -50,28 +50,29 @@ $hidecontact = get_theme_mod('hide_contact', 1);
              <div class="cols-3 widget-column-3">  
                <?php if($hidecontact == ''){?>              
                <?php if ( get_theme_mod( 'contact_title' ) !== "" ){  ?>
-                <h5><?php echo esc_html_e( get_theme_mod( 'contact_title', __('Contact Info','skt-strong'))); ?></h5>              
+                <h5><?php echo esc_html_e( get_theme_mod( 'contact_title', __('Información de contacto','skt-strong'))); ?></h5>              
 			   <?php } ?>
                              
                <?php if ( get_theme_mod('contact_add') !== "") { ?>
                 <div class="siteaddress">
-				   <?php echo esc_html_e( get_theme_mod( 'contact_add', __('591 Christie Way Passaic Street, North Carolina, America ( USA )','skt-strong'))); ?>
+                   <?php echo __( get_theme_mod( 'contact_add', __('Club Deportivo Universidad de Tarapaca<br> 18 de Septiembre 2222<br>
+                   Complejo Deportivo Integral, Oficina 1, Segundo Piso.','skt-strong'))); ?>
                 </div>             
 			   <?php } ?> 
                
              <div class="phone-no">	  
                <?php if ( get_theme_mod('contact_no') !== "") { ?>
-               <p><span><?php esc_html_e('Phone:', 'skt-strong');?></span> <?php echo esc_attr_e( get_theme_mod( 'contact_no', __('+123 456 7890','skt-strong'))); ?></p>             
+               <p><span><?php esc_html_e('Teléfono:', 'skt-strong');?></span> <?php echo esc_attr_e( get_theme_mod( 'contact_no', __('+56-58-2205045','skt-strong'))); ?></p>             
 			   <?php } ?>  
                
                <?php if( get_theme_mod('contact_mail') !== ""){ ?>
                <p><span><?php esc_html_e('Email:', 'skt-strong');?></span>
-               <a href="mailto:<?php echo sanitize_email(get_theme_mod('contact_mail','contact@company.com')); ?>"><?php echo get_theme_mod('contact_mail','contact@company.com'); ?></a>	</p>		
+               <a href="mailto:<?php echo sanitize_email(get_theme_mod('contact_mail','deportes@uta.cl')); ?>"><?php echo get_theme_mod('contact_mail','deportes@uta.cl'); ?></a>	</p>		
 			  <?php } ?> 
               
                
               <?php if ( get_theme_mod( 'website_link' ) !== "" ){  ?>
-               <p><span><?php esc_html_e('Website:', 'skt-strong');?></span>
+               <p><span><?php esc_html_e('Página web:', 'skt-strong');?></span>
                <a href="<?php echo home_url('/'); ?>"><?php echo home_url('/'); ?></a></p>              
 			   <?php } ?>           
                         

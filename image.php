@@ -30,13 +30,13 @@ get_header(); ?>
                                     get_the_title( $post->post_parent )
                                 );
     
-                                edit_post_link( esc_html__( 'Edit', 'skt-strong' ), '<span class="edit-link">', '</span>' );
+                                edit_post_link( esc_html__( 'Editar', 'skt-strong' ), '<span class="edit-link">', '</span>' );
                             ?>
                         </div><!-- .entry-meta -->
     
                         <nav role="navigation" id="image-navigation" class="image-navigation">
-                            <div class="nav-previous"><?php previous_image_link( false, esc_html__( '<span class="meta-nav">&larr;</span> Previous', 'skt-strong' ) ); ?></div>
-                            <div class="nav-next"><?php next_image_link( false, esc_html__( 'Next <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?></div>
+                            <div class="nav-previous"><?php previous_image_link( false, esc_html__( '<span class="meta-nav">&larr;</span> Previo', 'skt-strong' ) ); ?></div>
+                            <div class="nav-next"><?php next_image_link( false, esc_html__( 'Siguiente <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?></div>
                         </nav><!-- #image-navigation -->
                     </header><!-- .entry-header -->
     
@@ -56,13 +56,13 @@ get_header(); ?>
                         <?php
                             the_content();
                             wp_link_pages( array(
-                                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'skt-strong' ),
+                                'before' => '<div class="page-links">' . esc_html__( 'Páginas:', 'skt-strong' ),
                                 'after'  => '</div>',
                             ) );
                         ?>
                     </div><!-- .entry-content -->
     
-                    <?php edit_post_link( esc_html__( 'Edit', 'skt-strong' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+                    <?php edit_post_link( esc_html__( 'Editar', 'skt-strong' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
                 </article><!-- #post-## -->
     
                 <?php
