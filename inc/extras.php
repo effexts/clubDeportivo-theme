@@ -4,22 +4,22 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function skt_strong_page_menu_args( $args ) {
+function club_deportivo_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'skt_strong_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'club_deportivo_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function skt_strong_body_classes( $classes ) {
+function club_deportivo_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function skt_strong_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'skt_strong_body_classes' );
+add_filter( 'body_class', 'club_deportivo_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function skt_strong_enhanced_image_navigation( $url, $id ) {
+function club_deportivo_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
 
@@ -42,4 +42,4 @@ function skt_strong_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'skt_strong_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'club_deportivo_enhanced_image_navigation', 10, 2 );

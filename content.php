@@ -1,6 +1,6 @@
 <?php
 /**
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 ?>
  <div class="blog_lists">
@@ -16,7 +16,7 @@
                 <div class="postmeta">
                     <div class="post-date"><?php echo the_date(); ?></div><!-- post-date -->
                     <div class="post-comment"> &nbsp;|&nbsp; <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></div>
-                    <div class="post-categories"> &nbsp;|&nbsp; <?php the_category( __( ', ', 'skt-strong' )); ?></div>                  
+                    <div class="post-categories"> &nbsp;|&nbsp; <?php the_category( __( ', ', 'club-deportivo' )); ?></div>                  
                 </div><!-- postmeta -->
             <?php endif; ?>
         </header><!-- .entry-header -->
@@ -24,11 +24,11 @@
         <?php if ( is_search() || !is_single() ) : // Only display Excerpts for Search ?>
         <div class="entry-summary">
            	<?php the_excerpt(); ?>
-           <a class="ReadMore" href="<?php the_permalink(); ?>"><?php esc_html_e('Leer más &rarr;','skt-strong'); ?></a>
+           <a class="ReadMore" href="<?php the_permalink(); ?>"><?php esc_html_e('Leer más &rarr;','club-deportivo'); ?></a>
         </div><!-- .entry-summary -->
         <?php else : ?>
         <div class="entry-content">
-            <?php the_content( esc_html__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?>          
+            <?php the_content( esc_html__( 'Seguir leyendo <span class="meta-nav">&rarr;</span>', 'club-deportivo' ) ); ?>          
         </div><!-- .entry-content -->
         <?php endif; ?>
         <div class="clear"></div>

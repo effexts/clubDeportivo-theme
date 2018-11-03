@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
             <div class="blog-post">
 				<?php if ( have_posts() ) : ?>
                     <header>
-                        <h1 class="entry-title"><?php printf( esc_attr__( 'Search Results for: %s', 'skt-strong' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                        <h1 class="entry-title"><?php printf( esc_attr__( 'Resultados de búsqueda para: %s', 'club-deportivo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
                     </header>
                     <?php while ( have_posts() ) : the_post(); ?>
                         <?php get_template_part( 'content', 'search' ); ?>

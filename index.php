@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); 

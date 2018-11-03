@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); ?>
@@ -23,11 +23,11 @@ get_header(); ?>
                                         the_content();
                                         
                                         wp_link_pages( array(
-                                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'skt-strong' ) . '</span>',
+                                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Páginas:', 'club-deportivo' ) . '</span>',
                                             'after'       => '</div>',
                                             'link_before' => '<span>',
                                             'link_after'  => '</span>',
-                                            'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'skt-strong' ) . ' </span>%',
+                                            'pagelink'    => '<span class="screen-reader-text">' . __( 'Página', 'club-deportivo' ) . ' </span>%',
                                             'separator'   => '<span class="screen-reader-text">, </span>',
                                         ) );
                                     ?> 
