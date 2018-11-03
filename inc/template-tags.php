@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
-if ( ! function_exists( 'skt_strong_content_nav' ) ) :
+if ( ! function_exists( 'club_deportivo_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function skt_strong_content_nav( $nav_id ) {
+function club_deportivo_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -30,21 +30,21 @@ function skt_strong_content_nav( $nav_id ) {
 	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Navegación de entradas', 'skt-strong' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Navegación de entradas', 'club-deportivo' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'skt-strong' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'skt-strong' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'club-deportivo' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'club-deportivo' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( esc_attr__( '<span class="meta-nav">&larr;</span> Entradas antiguas', 'skt-strong' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( esc_attr__( '<span class="meta-nav">&larr;</span> Entradas antiguas', 'club-deportivo' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( esc_attr__( 'Nuevas entradas <span class="meta-nav">&rarr;</span>', 'skt-strong' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( esc_attr__( 'Nuevas entradas <span class="meta-nav">&rarr;</span>', 'club-deportivo' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -52,22 +52,22 @@ function skt_strong_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // skt_strong_content_nav
+endif; // club_deportivo_content_nav
 
-if ( ! function_exists( 'skt_strong_comment' ) ) :
+if ( ! function_exists( 'club_deportivo_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function skt_strong_comment( $comment, $args, $depth ) {
+function club_deportivo_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php esc_html_e( 'Pingback:', 'skt-strong' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_attr__( 'Editar', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'club-deportivo' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_attr__( 'Editar', 'club-deportivo' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>a
@@ -83,14 +83,14 @@ function skt_strong_comment( $comment, $args, $depth ) {
 					<?php printf( '<cite class="fn">%s</cite> on', get_comment_author_link() ); ?>
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( esc_attr_x( '%1$s', '1: date', 'skt-strong' ), get_comment_date(), get_comment_time() ); ?>
+							<?php printf( esc_attr_x( '%1$s', '1: date', 'club-deportivo' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( esc_attr__( 'Editar', 'skt-strong' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( esc_attr__( 'Editar', 'club-deportivo' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Tu comentario espera moderación.', 'skt-strong' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Tu comentario espera moderación.', 'club-deportivo' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -112,15 +112,15 @@ function skt_strong_comment( $comment, $args, $depth ) {
 	<?php     
 	endif;
 }
-endif; // ends check for skt_strong_comment()
+endif; // ends check for club_deportivo_comment()
 
-if ( ! function_exists( 'skt_strong_the_attached_image' ) ) :
+if ( ! function_exists( 'club_deportivo_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
  */
-function skt_strong_the_attached_image() {
+function club_deportivo_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'skt_strong_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'club_deportivo_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -165,11 +165,11 @@ function skt_strong_the_attached_image() {
 }
 endif;
 
-if ( ! function_exists( 'skt_strong_posted_on' ) ) :
+if ( ! function_exists( 'club_deportivo_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function skt_strong_posted_on() {
+function club_deportivo_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -181,7 +181,7 @@ function skt_strong_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( esc_attr__( '<span class="posted-on">Publicado el %1$s</span><span class="byline"> por %2$s</span>', 'skt-strong' ),
+	printf( esc_attr__( '<span class="posted-on">Publicado el %1$s</span><span class="byline"> por %2$s</span>', 'club-deportivo' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -197,7 +197,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  */
-function skt_strong_categorized_blog() {
+function club_deportivo_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -211,20 +211,20 @@ function skt_strong_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so skt_strong_categorized_blog should return true
+		// This blog has more than 1 category so club_deportivo_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so skt_strong_categorized_blog should return false
+		// This blog has only 1 category so club_deportivo_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in skt_strong_categorized_blog
+ * Flush out the transients used in club_deportivo_categorized_blog
  */
-function skt_strong_category_transient_flusher() {
+function club_deportivo_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'skt_strong_category_transient_flusher' );
-add_action( 'save_post',     'skt_strong_category_transient_flusher' );
+add_action( 'edit_category', 'club_deportivo_category_transient_flusher' );
+add_action( 'save_post',     'club_deportivo_category_transient_flusher' );

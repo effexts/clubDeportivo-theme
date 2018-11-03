@@ -5,7 +5,7 @@
  *
  * Displays all of the <head> section and everything up till <div class="container">
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
   <div class="header">
     <div class="container">
       <div class="logo">
-        <?php skt_strong_the_custom_logo();?>
+        <?php club_deportivo_the_custom_logo();?>
         <a href="<?php echo home_url('/'); ?>">
           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logosimple2.png" />
           <h1><?php bloginfo('name');?></h1>
@@ -38,52 +38,6 @@
 
       <div class="widget-right">
         <?php if (!dynamic_sidebar('header-right-widget')): ?>
-
-        <?php if ($hidecontact == '') { ?>
-          <?php if (get_theme_mod('contact_no') !== "") { ?>
-            <div class="hdrinfo">
-              <div class="hdrinfo-left">
-                <img style="margin:0 5px -1px 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/icon-phone.png" alt="" />
-              </div>
-              <div class="hdrinfo-right"><strong><?php esc_attr_e(get_theme_mod('contact_no', __('+56-58-2205045', 'skt-strong')));?></strong>
-                <?php if (get_theme_mod('contact_mail') !== "") { ?>
-                  <a href="mailto:<?php echo sanitize_email(get_theme_mod('contact_mail', 'deportes@uta.cl')); ?>">
-                    <?php echo get_theme_mod('contact_mail', 'deportes@uta.cl'); ?>
-                  </a>
-                  <?php
-
-                }?>
-              </div>
-              <div class="clear"></div>
-            </div>
-          <?php
-          }
-        }?>
-
-        <?php if ($hidesocial == '') { ?>
-          <div class="header-social-icons">
-            <?php if (get_theme_mod('fb_link') !== "") { ?>
-              <a title="facebook" class="fb" target="_blank" href="<?php echo esc_url(get_theme_mod('fb_link', '#facebook')); ?>"></a>
-              <?php
-              }?>
-
-            <?php if (get_theme_mod('twitt_link') !== "") { ?>
-              <a title="twitter" class="tw" target="_blank" href="<?php echo esc_url(get_theme_mod('twitt_link', '#twitter')); ?>"></a>
-              <?php
-              }?>
-
-            <?php if (get_theme_mod('gplus_link') !== "") { ?>
-              <a title="google-plus" class="gp" target="_blank" href="<?php echo esc_url(get_theme_mod('gplus_link', '#gplus')); ?>"></a>
-              <?php
-              }?>
-
-            <?php if (get_theme_mod('linked_link') !== "") { ?>
-              <a title="linkedin" class="in" target="_blank" href="<?php echo esc_url(get_theme_mod('linked_link', '#linkedin')); ?>"></a>
-              <?php
-              }?>
-          </div>
-          <?php
-          }?>
 
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logouta.png" />
         <div class="clear"></div>
@@ -96,7 +50,7 @@
 
     <div id="menubar">
       <div class="container menuwrapper">
-        <div class="toggle"><a class="toggleMenu" href="#"><?php esc_html_e('Menu', 'skt-strong');?></a></div>
+        <div class="toggle"><a class="toggleMenu" href="#"><?php esc_html_e('Menu', 'club-deportivo');?></a></div>
         <div class="sitenav">
           <?php wp_nav_menu(array('theme_location' => 'primary'));?>
         </div><!-- .sitenav-->
@@ -139,10 +93,14 @@
           $content = esc_html(wp_trim_words($post->post_content, 25, '')); ?>
       <div id="slidecaption<?php echo esc_attr($i); ?>" class="nivo-html-caption">
         <div class="slide_info">
-          <h2><?php echo wp_kses_post($title); ?></h2>
+          <h2>
+            <a href="<?php echo esc_url(get_permalink()); ?>">
+              <?php echo wp_kses_post($title); ?>
+            </a>
+          </h2>
           <div class="clear"></div>
           <p><?php echo wp_kses_post($content); ?></p>
-          <p class="slide_more"><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html_e('Leer mas','skt-strong'); ?></a></p>
+          <!-- <p class="slide_more"><a href="<?php //echo esc_url(get_permalink()); ?>"><?php //echo esc_html_e('Leer mas','club-deportivo'); ?></a></p> -->
           <div class="clear"></div>
         </div>
       </div>
@@ -169,7 +127,7 @@
                           }?>">
                 <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title();?></a> </h3>
                 <p><?php the_excerpt();?></p>
-                <a class="ReadMore" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer más', 'skt-strong');?></a>
+                <a class="ReadMore" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Leer más', 'club-deportivo');?></a>
                 </div>
                 <?php endwhile;
                       wp_reset_postdata();

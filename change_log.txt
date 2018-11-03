@@ -14,4 +14,4 @@ Version 1.4
 i) Resolved all issue as per reviwer commnets.
 
 Version 1.5
-i) Resolved Cannot modify header information - headers already sent by (output started at 		       wp-content/themes/skt-strong/inc/about-themes.php:9)
+i) Resolved Cannot modify header information - headers already sent by (output started at 		       wp-content/themes/club-deportivo/inc/about-themes.php:9)

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); ?>
@@ -33,9 +33,9 @@ get_header(); ?>
 				// Previous/next post navigation.
 				the_posts_pagination( array(
 							'mid_size' => 2,
-							'prev_text' => __( 'Atrás', 'skt-strong' ),
-							'next_text' => __( 'Siguiente', 'skt-strong' ),
-							'screen_reader_text' => __( 'Navegación de Posts', 'skt-strong' )
+							'prev_text' => __( 'Atrás', 'club-deportivo' ),
+							'next_text' => __( 'Siguiente', 'club-deportivo' ),
+							'screen_reader_text' => __( 'Navegación de Posts', 'club-deportivo' )
 				) );
 			    ?>
             <?php else : ?>

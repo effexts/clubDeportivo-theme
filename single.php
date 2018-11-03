@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); ?>
@@ -12,7 +12,7 @@ get_header(); ?>
         <section class="site-main">            
                 <?php while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part( 'content', 'single' ); ?>
-                    <?php skt_strong_content_nav( 'nav-below' ); ?>
+                    <?php club_deportivo_content_nav( 'nav-below' ); ?>
                     <?php
                     // If comments are open or we have at least one comment, load up the comment template
                     if ( comments_open() || '0' != get_comments_number() )

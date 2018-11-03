@@ -1,6 +1,6 @@
 <?php
 /**
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 ?>
  <div class="blog_lists">
@@ -16,13 +16,13 @@
                 <div class="postmeta">
                     <div class="post-date"><?php echo the_date(); ?></div><!-- post-date -->
                     <div class="post-comment"> &nbsp;|&nbsp; <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></div>
-                    <div class="post-categories"> &nbsp;|&nbsp; <?php the_category( esc_html( ', ', 'skt-strong' )); ?></div>                  
+                    <div class="post-categories"> &nbsp;|&nbsp; <?php the_category( esc_html( ', ', 'club-deportivo' )); ?></div>                  
                 </div><!-- postmeta -->
             <?php endif; ?>
         </header><!-- .entry-header -->
         <div class="entry-summary">
            	<?php the_excerpt(); ?>
-           <a class="ReadMore" href="<?php the_permalink(); ?>"><?php esc_attr_e('Leer más &rarr;','skt-strong'); ?></a>
+           <a class="ReadMore" href="<?php the_permalink(); ?>"><?php esc_attr_e('Leer más &rarr;','club-deportivo'); ?></a>
         </div><!-- .entry-summary -->
         <div class="clear"></div>
     </article><!-- #post-## -->

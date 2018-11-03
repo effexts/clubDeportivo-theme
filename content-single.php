@@ -1,6 +1,6 @@
 <?php
 /**
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('single-post'); ?>>
@@ -27,11 +27,11 @@
 			the_content();
 			
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Páginas:', 'skt-strong' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Páginas:', 'club-deportivo' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Página', 'skt-strong' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Página', 'club-deportivo' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>     

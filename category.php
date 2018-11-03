@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package SKT Strong
+ * @package Club Deportivo UTA
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
      <div class="page_content">
         <section class="site-main">
             <header class="page-header">
-				<h1 class="entry-title"><?php single_cat_title( esc_html__('Categoría: ', 'skt-strong') ); ?></h1>
+				<h1 class="entry-title"><?php single_cat_title( esc_html__('Categoría: ', 'club-deportivo') ); ?></h1>
             </header><!-- .page-header -->
 			<?php if ( have_posts() ) : ?>
                 <div class="blog-post">

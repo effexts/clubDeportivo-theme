@@ -12,7 +12,7 @@ jQuery(window).load(function() {
 	
 
 // NAVIGATION CALLBACK
-var skt_strong_ww = jQuery(window).width();
+var club_deportivo_ww = jQuery(window).width();
 jQuery(document).ready(function() { 
 	jQuery(".sitenav li a").each(function() {
 		if (jQuery(this).next().length > 0) {
@@ -24,17 +24,17 @@ jQuery(document).ready(function() {
 		jQuery(this).toggleClass("active");
 		jQuery(".sitenav").slideToggle('fast');
 	});
-	skt_strong_adjustMenu();
+	club_deportivo_adjustMenu();
 })
 
 // navigation orientation resize callbak
 jQuery(window).bind('resize orientationchange', function() {
-	skt_strong_ww = jQuery(window).width();
-	skt_strong_adjustMenu();
+	club_deportivo_ww = jQuery(window).width();
+	club_deportivo_adjustMenu();
 });
 
-var skt_strong_adjustMenu = function() {
-	if (skt_strong_ww < 981) {
+var club_deportivo_adjustMenu = function() {
+	if (club_deportivo_ww < 981) {
 		jQuery(".toggleMenu").css("display", "block");
 		if (!jQuery(".toggleMenu").hasClass("active")) {
 			jQuery(".sitenav").hide();
@@ -71,3 +71,19 @@ jQuery(document).ready(function() {
             heading.html([first_part, ' <span>', last_word, '</span>'].join(''));
         });
 });	
+
+
+var headertext = [],
+headers = document.querySelectorAll("table th"),
+tablerows = document.querySelectorAll("table th"),
+tablebody = document.querySelector("table tbody");
+
+for(var i = 0; i < headers.length; i++) {
+  var current = headers[i];
+  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
+} 
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+  for (var j = 0, col; col = row.cells[j]; j++) {
+    col.setAttribute("data-th", headertext[j]);
+  } 
+}
